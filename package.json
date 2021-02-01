@@ -1,0 +1,23 @@
+{
+  "name": "credit-report.web-container.poc",
+  "version": "0.0.1",
+  "description": "Stitching layer for Credit Report micro frontend applications",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikhailMamayeu/credit-report.web-container.poc.git"
+  },
+  "keywords": [
+    "Credit Report",
+    "micro frontend"
+  ],
+  "author": "Mikhail Mamayeu <Mikhail.Mamayeu@bglgroup.co.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MikhailMamayeu/credit-report.web-container.poc/issues"
+  },
+  "homepage": "https://github.com/MikhailMamayeu/credit-report.web-container.poc#readme"
+}
