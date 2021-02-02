@@ -32,5 +32,9 @@ module.exports = env => {
         },
       },
     },
+    externals: {
+      react: 'React',
+      'react-dom': 'ReactDOM',
+    },
   };
 };
