@@ -24,5 +24,4 @@ module.exports = {
       filename: 'static/[name].css',
     }),
   ],
-  watch: true,
 };
