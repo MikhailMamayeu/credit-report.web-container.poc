@@ -1,7 +1,9 @@
 import React from 'react';
 
+import './App.css';
+
 const App = () => (
-  <header>
+  <header className="app__header">
     <h1>Credit Report Web Container</h1>
   </header>
 );
