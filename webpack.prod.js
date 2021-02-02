@@ -11,7 +11,7 @@ const plugins = [
 
 module.exports = env => {
   if (env.ANALYSE) {
-    plugins.push(new BundleAnalyzerPlugin());
+    plugins.push(new BundleAnalyzerPlugin({ analyzerPort: 8000 }));
   }
 
   return {
