@@ -25,6 +25,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'public/index.html',
       title: 'Credit Report Web Container',
+      environment: process.env.NODE_ENV,
     }),
   ],
   resolve: {
