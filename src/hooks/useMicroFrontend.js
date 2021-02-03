@@ -21,9 +21,7 @@ const useMicroFrontend = microFrontend => {
         } else {
           const linkTag = document.createElement('link');
 
-          linkTag.href = `${microFrontend.host}${
-            manifest[microFrontend.styles]
-          }`;
+          linkTag.href = manifest[microFrontend.styles];
           linkTag.rel = 'stylesheet';
 
           document.head.appendChild(linkTag);
@@ -37,9 +35,7 @@ const useMicroFrontend = microFrontend => {
           const scriptTag = document.createElement('script');
 
           scriptTag.id = `${microFrontend.name}-script`;
-          scriptTag.src = `${microFrontend.host}${
-            manifest[microFrontend.script]
-          }`;
+          scriptTag.src = manifest[microFrontend.script];
           scriptTag.onload = () => {
             console.log(
               `Loaded ${microFrontend.script} from ${microFrontend.host}`
