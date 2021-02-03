@@ -16,7 +16,13 @@ RUN npm run build
 
 FROM nginx:stable-alpine
 
-COPY --from=builder /usr/src/app/dist /usr/share/nginx/html
+RUN mkdir -p /var/www/localhost && chown nginx:nginx /var/www/localhost
+
+COPY --from=builder --chown=nginx:nginx /usr/src/app/dist /var/www/localhost
+
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
+
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
