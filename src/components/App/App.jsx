@@ -1,26 +1,37 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { App as MeerstrapApp, Footer } from '@meerstrap/components';
+import { Header } from '@meerstrap/meerkit';
+
+import MicroFrontend from '../MicroFrontend';
 
 import microFrontends from '../../config/micro-frontends';
 
-import useMicroFrontend from '../../hooks/useMicroFrontend';
-
-import './App.css';
-
-const App = () => {
-  useMicroFrontend(microFrontends.registration);
-  useMicroFrontend(microFrontends.summaryReport);
-
-  return (
-    <>
-      <header className="app__header">
-        <h1>Credit Report Web Container</h1>
-      </header>
-      <main>
-        <section id={`${microFrontends.registration.name}-container`} />
-        <section id={`${microFrontends.summaryReport.name}-container`} />
-      </main>
-    </>
-  );
-};
+const App = () => (
+  <MeerstrapApp>
+    <Header
+      subdomain={
+        <>
+          <strong>credit-report.</strong>web-container
+        </>
+      }
+      myAccount
+    />
+    <Router>
+      <Route path="/summary-report">
+        <MicroFrontend microFrontend={microFrontends.summaryReport} />
+      </Route>
+      <Route path="/">
+        <MicroFrontend microFrontend={microFrontends.registration} />
+      </Route>
+    </Router>
+    <Footer>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quis,
+      magnam in hic consequuntur nulla consequatur. Voluptatem ratione
+      recusandae maiores velit voluptates, dignissimos autem sequi magni saepe
+      quisquam libero perspiciatis.
+    </Footer>
+  </MeerstrapApp>
+);
 
 export default App;
