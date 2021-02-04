@@ -35,7 +35,9 @@ module.exports = {
       title: 'Credit Report Web Container',
       environment: process.env.NODE_ENV,
     }),
-    new webpack.DefinePlugin({ environment: process.env.NODE_ENV }),
+    new webpack.DefinePlugin({
+      environment: JSON.stringify(process.env.NODE_ENV),
+    }),
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
