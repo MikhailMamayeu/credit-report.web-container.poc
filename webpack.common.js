@@ -17,6 +17,13 @@ module.exports = {
       },
       {
         test: /\.(sa|sc|c)ss$/,
+        include: /node_modules\/@meerstrap\/webui/,
+        sideEffects: true,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        exclude: /node_modules/,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
