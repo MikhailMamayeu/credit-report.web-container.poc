@@ -7,7 +7,8 @@ module.exports = {
     filename: 'static/[name].js',
   },
   devServer: {
-    host: '127.0.0.1',
+    https: true,
+    host: 'credit-report-web-container-poc.dev.ctmers.io',
     port: 3000,
     static: ['dist/static'],
     open: true,
