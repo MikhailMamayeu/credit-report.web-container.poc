@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useHistory } from 'react-router-dom';
 
 import useMicroFrontend from '../../hooks/useMicroFrontend';
 
 const MicroFrontend = ({ microFrontend }) => {
-  useMicroFrontend(microFrontend);
+  const history = useHistory();
+
+  useMicroFrontend(microFrontend, history);
 
   return <section id={`${microFrontend.name}-container`} />;
 };

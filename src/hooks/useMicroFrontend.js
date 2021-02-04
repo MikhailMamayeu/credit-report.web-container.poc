@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const useMicroFrontend = microFrontend => {
+const useMicroFrontend = (microFrontend, history) => {
   useEffect(() => {
     const loadResources = async () => {
       if (
@@ -42,7 +42,8 @@ const useMicroFrontend = microFrontend => {
             );
 
             window[microFrontend.render](
-              document.getElementById(`${microFrontend.name}-container`)
+              document.getElementById(`${microFrontend.name}-container`),
+              history
             );
           };
 
@@ -52,7 +53,7 @@ const useMicroFrontend = microFrontend => {
     };
 
     loadResources();
-  }, [microFrontend]);
+  }, [microFrontend, history]);
 };
 
 export default useMicroFrontend;
