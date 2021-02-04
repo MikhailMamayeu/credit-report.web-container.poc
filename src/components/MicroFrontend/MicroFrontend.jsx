@@ -15,7 +15,7 @@ MicroFrontend.propTypes = {
     host: PropTypes.string,
     script: PropTypes.string,
     styles: PropTypes.string,
-    render: PropTypes.func,
+    render: PropTypes.string,
   }).isRequired,
 };
 
