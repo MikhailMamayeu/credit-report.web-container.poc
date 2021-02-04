@@ -2,11 +2,15 @@ FROM node:lts-alpine as builder
 
 RUN mkdir -p /usr/src/app && chown node:node /usr/src/app
 
+RUN npm install -g npm@latest && npm cache clean --force
+
 USER node
 
 WORKDIR /usr/src/app
 
 COPY --chown=node:node package*.json ./
+
+COPY --chown=node:node .npmrc ./
 
 RUN npm install
 
