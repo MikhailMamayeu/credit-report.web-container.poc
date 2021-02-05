@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import { App as MeerstrapApp, Footer } from '@meerstrap/components';
 import { Header } from '@meerstrap/meerkit';
 
@@ -21,8 +21,11 @@ const App = () => (
       <Route path="/summary-report">
         <MicroFrontend microFrontend={microFrontends.summaryReport} />
       </Route>
-      <Route path="/">
+      <Route path="/registration">
         <MicroFrontend microFrontend={microFrontends.registration} />
+      </Route>
+      <Route exact path="/">
+        <Redirect to="/registration" />
       </Route>
     </Router>
     <Footer>
