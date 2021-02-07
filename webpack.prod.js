@@ -35,6 +35,9 @@ module.exports = env => {
     externals: {
       react: 'React',
       'react-dom': 'ReactDOM',
+      'react-router-dom': 'ReactRouterDOM',
+      history: 'History',
+      'prop-types': 'PropTypes',
     },
   };
 };
