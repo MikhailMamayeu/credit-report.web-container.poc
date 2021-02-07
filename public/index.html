@@ -11,11 +11,23 @@
     <% if (htmlWebpackPlugin.options.environment === 'production') { %>
     <script
       crossorigin
-      src="https://unpkg.com/react@17.0.1/umd/react.production.min.js"
+      src="https://unpkg.com/react@16.14.0/umd/react.production.min.js"
     ></script>
     <script
       crossorigin
-      src="https://unpkg.com/react-dom@17.0.1/umd/react-dom.production.min.js"
+      src="https://unpkg.com/react-dom@16.14.0/umd/react-dom.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-router-dom@5.2.0/umd/react-router-dom.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/history@4.10.1/umd/history.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/prop-types@15.7.2/prop-types.min.js"
     ></script>
     <% } %>
   </body>
