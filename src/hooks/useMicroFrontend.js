@@ -18,7 +18,7 @@ const useMicroFrontend = (microFrontend, history) => {
           console.log(
             `${microFrontend.styles} from ${microFrontend.host} has already been loaded`
           );
-        } else {
+        } else if (manifest[microFrontend.styles]) {
           const linkTag = document.createElement('link');
 
           linkTag.href = manifest[microFrontend.styles];
