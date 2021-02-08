@@ -1,12 +1,14 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const CompressionWebpackPlugin = require('compression-webpack-plugin');
 
 const plugins = [
   new CleanWebpackPlugin(),
   new MiniCssExtractPlugin({
     filename: 'static/[name].[contenthash].css',
   }),
+  new CompressionWebpackPlugin(),
 ];
 
 module.exports = env => {
