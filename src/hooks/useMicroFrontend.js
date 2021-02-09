@@ -64,6 +64,12 @@ const useMicroFrontend = (microFrontend, history) => {
     };
 
     loadResources();
+
+    return () => {
+      window[microFrontend.unmount](
+        document.getElementById(`${microFrontend.name}-container`)
+      );
+    };
   }, [microFrontend, history]);
 };
 
