@@ -18,11 +18,11 @@ const App = () => (
       myAccount
     />
     <Router>
-      <Route path="/summary-report">
-        <MicroFrontend microFrontend={microFrontends.summaryReport} />
-      </Route>
       <Route path="/registration">
         <MicroFrontend microFrontend={microFrontends.registration} />
+      </Route>
+      <Route path="/summary-report">
+        <MicroFrontend microFrontend={microFrontends.summaryReport} />
       </Route>
       <Route exact path="/">
         <Redirect to="/registration" />

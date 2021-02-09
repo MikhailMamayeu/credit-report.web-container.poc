@@ -9,6 +9,7 @@ export default {
     script: 'main.js',
     styles: 'main.css',
     render: 'renderRegistration',
+    unmount: 'unmountRegistration',
   },
   summaryReport: {
     name: 'credit-report.summary-report.poc',
@@ -20,5 +21,6 @@ export default {
     script: 'main.js',
     styles: 'main.css',
     render: 'renderSummaryReport',
+    unmount: 'unmountSummaryReport',
   },
 };

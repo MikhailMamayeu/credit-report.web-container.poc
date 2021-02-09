@@ -19,6 +19,7 @@ MicroFrontend.propTypes = {
     script: PropTypes.string,
     styles: PropTypes.string,
     render: PropTypes.string,
+    unmount: PropTypes.string,
   }).isRequired,
 };
 
