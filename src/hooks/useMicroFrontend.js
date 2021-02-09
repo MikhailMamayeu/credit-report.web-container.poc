@@ -21,6 +21,7 @@ const useMicroFrontend = (microFrontend, history) => {
         } else if (manifest[microFrontend.styles]) {
           const linkTag = document.createElement('link');
 
+          linkTag.id = `${microFrontend.name}-styles`;
           linkTag.href = manifest[microFrontend.styles];
           linkTag.rel = 'stylesheet';
 
