@@ -10,6 +10,11 @@ const useMicroFrontend = (microFrontend, history) => {
         console.log(
           `${microFrontend.styles} and ${microFrontend.script} from ${microFrontend.host} have already been loaded`
         );
+
+        window[microFrontend.render](
+          document.getElementById(`${microFrontend.name}-container`),
+          history
+        );
       } else {
         const manifest = await fetch(
           `${microFrontend.host}/manifest.json`
@@ -31,6 +36,11 @@ const useMicroFrontend = (microFrontend, history) => {
         if (document.getElementById(`${microFrontend.name}-script`)) {
           console.log(
             `${microFrontend.script} from ${microFrontend.host} has already been loaded`
+          );
+
+          window[microFrontend.render](
+            document.getElementById(`${microFrontend.name}-container`),
+            history
           );
         } else {
           const scriptTag = document.createElement('script');
