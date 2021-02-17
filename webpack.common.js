@@ -1,7 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const webpack = require('webpack');
+const {
+  DefinePlugin,
+  container: { ModuleFederationPlugin },
+} = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -36,9 +39,22 @@ module.exports = {
       environment: process.env.NODE_ENV,
       hostType: process.env.HOST_TYPE,
     }),
-    new webpack.DefinePlugin({
+    new DefinePlugin({
       environment: JSON.stringify(process.env.NODE_ENV),
       hostType: JSON.stringify(process.env.HOST_TYPE),
+    }),
+    new ModuleFederationPlugin({
+      name: 'webContainer',
+      library: { type: 'var', name: 'webContainer' },
+      remotes: { registration: 'registration', summaryReport: 'summaryReport' },
+      shared: [
+        'react',
+        'react-dom',
+        'react-router-dom',
+        'prop-types',
+        '@meerstrap/components',
+        '@meerstrap/webui',
+      ],
     }),
   ],
   resolve: {
