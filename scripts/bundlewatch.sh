@@ -1,7 +1,17 @@
 #!/bin/bash
 
-BUNDLEWATH_RESULT="$(npx bundlewatch --config bundlewatch.config.json | awk '/^Result breakdown at:/ { print $4 }')"
+# Build assets
 
-echo $'\n'$BUNDLEWATH_RESULT >> README.md;
+npm run build
 
-git add README.md
+# Get results breakdown URL
+
+BUNDLEWATH_RESULT="$(npx bundlewatch --config bundlewatch.config.json | awk '/^Result breakdown at:/ { print $4 }')";
+
+# Replace existing URL with the new one
+
+sed -i "s|^\[Available here\].*|[Available here]($BUNDLEWATH_RESULT)|" README.md;
+
+# Stage and commit README.md
+
+git add README.md && git commit -m "Update README.md with bundlewatch results URL";
