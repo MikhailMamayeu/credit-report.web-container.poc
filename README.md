@@ -45,3 +45,7 @@ Serve the bundle over NGINX inside Docker
 ```
 docker run -dp 3000:80 credit-report.web-container.poc
 ```
+
+## Bundle size results
+
+[Available here](https://ja2r7.app.goo.gl/p8nG6wFwFM5GAhD66)
