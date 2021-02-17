@@ -1,11 +1,35 @@
 import React from 'react';
-import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  useHistory,
+} from 'react-router-dom';
 import { App as MeerstrapApp, Footer } from '@meerstrap/components';
 import { Header } from '@meerstrap/meerkit';
 
-import MicroFrontend from '../MicroFrontend';
+// eslint-disable-next-line import/no-unresolved
+import Registration from 'registration/App';
+// eslint-disable-next-line import/no-unresolved
+import SummaryReport from 'summaryReport/App';
 
-import microFrontends from '../../config/micro-frontends';
+const Routes = () => {
+  const history = useHistory();
+
+  return (
+    <>
+      <Route path="/registration">
+        <Registration history={history} />
+      </Route>
+      <Route path="/summary-report">
+        <SummaryReport history={history} />
+      </Route>
+      <Route exact path="/">
+        <Redirect to="/registration" />
+      </Route>
+    </>
+  );
+};
 
 const App = () => (
   <MeerstrapApp>
@@ -18,15 +42,7 @@ const App = () => (
       myAccount
     />
     <Router>
-      <Route path="/registration">
-        <MicroFrontend microFrontend={microFrontends.registration} />
-      </Route>
-      <Route path="/summary-report">
-        <MicroFrontend microFrontend={microFrontends.summaryReport} />
-      </Route>
-      <Route exact path="/">
-        <Redirect to="/registration" />
-      </Route>
+      <Routes />
     </Router>
     <Footer>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quis,
