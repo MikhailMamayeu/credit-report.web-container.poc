@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 :loudspeaker: Make sure to have [Node.js](https://nodejs.org/en/) installed on your system
 
-- Add the following line to the `hosts` file in order to avoid [the infamous CORS issue](https://comparethemarket.atlassian.net/wiki/spaces/MEER/pages/1907130737) when requesting CtM fonts:
+- Add the following line to the `hosts` file in order to avoid [the infamous CORS issue](https://comparethemarket.atlassian.net/wiki/spaces/MEER/pages/1907130737) when requesting CtM fonts
 
 ```
 127.0.0.1 credit-report-web-container-poc.dev.ctmers.io
@@ -42,13 +42,13 @@ If you want to serve the production bundle over a web server, then feel free to 
 
 - Get [`mkcert`](https://github.com/FiloSottile/mkcert) on your machine
 
-- Create a new local CA by executing the following command:
+- Create a new local CA by executing the following command
 
 ```
 mkcert -install
 ```
 
-- Generate a self-signed certificate for `credit-report-web-container-poc.dev.ctmers.io` by running the below command from **the root of the project**:
+- Generate a self-signed certificate for `credit-report-web-container-poc.dev.ctmers.io` by running the below command from **the root of the project**
 
 ```
 mkcert credit-report-web-container-poc.dev.ctmers.io
