@@ -7,12 +7,9 @@
     <% if (htmlWebpackPlugin.options.environment === 'production') { %>
     <link rel="preconnect" href="https://unpkg.com" />
     <link rel="preconnect" href="https://cdn2.comparethemarket.com" />
-    <script src="http://localhost:3001/static/registration.js"></script>
-    <script src="http://localhost:3002/static/summaryReport.js"></script>
-    <% } else { %>
+    <% } %>
     <script src="https://credit-report-registration-poc.dev.ctmers.io:3001/static/registration.js"></script>
     <script src="https://credit-report-summary-report-poc.dev.ctmers.io:3002/static/summaryReport.js"></script>
-    <% } %>
   </head>
   <body>
     <div id="app"></div>
