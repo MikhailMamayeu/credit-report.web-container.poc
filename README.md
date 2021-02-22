@@ -68,4 +68,4 @@ docker run -dp 2000:80 -p 3000:443 credit-report.web-container.poc
 
 ## Bundle size results
 
-[Available here](https://ja2r7.app.goo.gl/E1jqHthi9oy256Wo8)
+[Available here](https://ja2r7.app.goo.gl/rajrMgVoQuasxzUp6)
