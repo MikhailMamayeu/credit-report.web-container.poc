@@ -10,7 +10,7 @@ BUNDLEWATH_RESULT="$(npx bundlewatch --config bundlewatch.config.json | awk '/^R
 
 # Replace existing URL with the new one
 
-sed -i "s|^\[Available here\].*|[Available here]($BUNDLEWATH_RESULT)|" README.md;
+sed -i "s|^\[Bundle size\].*|[Bundle size]($BUNDLEWATH_RESULT)|" README.md;
 
 # Stage and commit README.md
 

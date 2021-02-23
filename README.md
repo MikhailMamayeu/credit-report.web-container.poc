@@ -66,6 +66,10 @@ docker build -t credit-report.web-container.poc .
 docker run -dp 2000:80 -p 3000:443 credit-report.web-container.poc
 ```
 
-## Bundle size results
+## Performance and bundle weight
 
-[Available here](https://ja2r7.app.goo.gl/rajrMgVoQuasxzUp6)
+:eyes: The below results are based on the locally available application served over NGINX with self-signed SSL certificate
+
+[Web performance](https://ctm-fcr-web-poc.s3-eu-west-1.amazonaws.com/sitespeed-result/custom-micro-frontend/index.html)
+
+[Bundle size](https://ja2r7.app.goo.gl/rajrMgVoQuasxzUp6)
