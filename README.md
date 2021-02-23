@@ -70,6 +70,6 @@ docker run -dp 2000:80 -p 3000:443 credit-report.web-container-poc
 
 :eyes: The below results are based on the locally available application served over NGINX with self-signed SSL certificate
 
-[Web performance](https://s3-eu-west-1.amazonaws.com/credit-report-s3-poc.test.ctmers.io/sitespeed-result/custom-micro-frontend/index.html)
+[Web performance](https://s3-eu-west-1.amazonaws.com/credit-report-s3-poc.test.ctmers.io/sitespeed-result/module-federation/index.html)
 
 [Bundle size](https://ja2r7.app.goo.gl/noo7MkwQvMuU6E5B8)
