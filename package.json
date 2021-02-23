@@ -6,7 +6,8 @@
   "scripts": {
     "analyse": "npm run build -- --env ANALYSE",
     "build": "cross-env NODE_ENV=production webpack -m -c webpack.common.js -c webpack.prod.js",
-    "bundlewatch": "./scripts/bundlewatch.sh",
+    "bundlewatch": "./scripts/bundlewatch",
+    "sitespeed": "./scripts/sitespeed",
     "start": "cross-env NODE_ENV=development webpack serve -m -c webpack.common.js -c webpack.dev.js"
   },
   "repository": {

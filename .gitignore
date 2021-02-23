@@ -6,3 +6,6 @@ dist
 
 # Certificates
 *.pem
+
+# Sitespeed results
+sitespeed-result
