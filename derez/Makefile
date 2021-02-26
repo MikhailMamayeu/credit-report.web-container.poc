@@ -10,7 +10,7 @@ TAR_FILESYSTEM := $(BASE_NAME).tar
 
 image: # Build Docker image to generate Webpack assets
 image:
-	docker build -t $(IMAGE) -f $(ROOT_DIR)Dockerfile.s3 $(ROOT_DIR)
+	docker build --build-arg HOST_TYPE=s3 -t $(IMAGE) -f $(ROOT_DIR)Dockerfile.s3 $(ROOT_DIR)
 
 build: # Generate Webpack assets in Docker container
 build:

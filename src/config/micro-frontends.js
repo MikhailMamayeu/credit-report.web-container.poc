@@ -1,7 +1,19 @@
+const getPublicPath = (hostType, microFrontend) => {
+  switch (hostType) {
+    case 's3':
+      return `/v1/${microFrontend.page}`;
+    case 'nginx':
+      return `https://ctm-fcr-web-poc.s3-eu-west-1.amazonaws.com/v2/${microFrontend.page}`;
+    default:
+      return `https://credit-report-${microFrontend.page}-poc.dev.ctmers.io:${microFrontend.port}`;
+  }
+};
+
 export default {
   registration: {
     name: 'credit-report.registration-poc',
-    host: 'https://credit-report-registration-poc.dev.ctmers.io:3001',
+    // eslint-disable-next-line no-undef
+    host: getPublicPath(hostType, { page: 'registration', port: 3001 }),
     script: 'main.js',
     styles: 'main.css',
     render: 'renderRegistration',
@@ -9,7 +21,8 @@ export default {
   },
   summaryReport: {
     name: 'credit-report.summary-report-poc',
-    host: 'https://credit-report-summary-report-poc.dev.ctmers.io:3002',
+    // eslint-disable-next-line no-undef
+    host: getPublicPath(hostType, { page: 'summary-report', port: 3002 }),
     script: 'main.js',
     styles: 'main.css',
     render: 'renderSummaryReport',

@@ -37,6 +37,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       environment: JSON.stringify(process.env.NODE_ENV),
+      hostType: JSON.stringify(process.env.HOST_TYPE),
     }),
   ],
   resolve: {
