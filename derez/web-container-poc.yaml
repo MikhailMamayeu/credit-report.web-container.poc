@@ -1,0 +1,25 @@
+owner: Mikhail.Mamayeu
+name: web-container-poc
+domain: credit-report
+serviceCatalogue: catalogue.yakov.io/service/credit-report.web-container.poc
+tier: 5
+role: app
+
+service:
+  resourceType:
+    cpu:
+      size: medium
+  scalingHPAType: mixed
+  memoryHPAPercentage: 90
+  cpuHPApercentage: 60
+  port: 3000
+  healthchecks:
+    alive:
+      path: /liveness
+      interval: 10
+    ready:
+      path: /readiness
+      interval: 10
+    initialDelaySeconds: 30
+  upgradeStrategy:
+    maxSurge: 100%

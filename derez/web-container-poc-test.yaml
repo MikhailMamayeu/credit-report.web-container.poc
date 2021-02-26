@@ -1,0 +1,4 @@
+service:
+  singleton: true
+  whitelist:
+    internal: true
