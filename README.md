@@ -57,7 +57,7 @@ mkcert credit-report-web-container-poc.dev.ctmers.io
 - Build the image
 
 ```
-docker build -t credit-report.web-container-poc .
+docker build -t credit-report.web-container-poc -f Dockerfile.dev .
 ```
 
 - Serve the bundle over NGINX inside Docker
