@@ -31,6 +31,8 @@ s3-filesystem:
 s3-extract: # Extract Webpack assets from Docker filesystem
 s3-extract:
 	tar --strip-components=3 -xf $(ROOT_DIR)$(TAR_FILESYSTEM) -C $(ROOT_DIR) usr/src/app/dist
+	rm `find $(ROOT_DIR)dist -type f -not -regex '.*gz$$'`
+	find $(ROOT_DIR)dist -type f -regex '.*gz$$' -exec sh -c 'mv "$$0" "$${0%.gz}"' {} \;
 
 s3-deploy: # Deploy assets to S3
 s3-deploy:
