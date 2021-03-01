@@ -1,6 +1,6 @@
 # Credit Report Web Container POC
 
-The stitching layer to get [Credit Report Registration POC](https://github.com/MikhailMamayeu/credit-report.registration.poc) and [Credit Report Summary Report POC](https://github.com/MikhailMamayeu/credit-report.summary-report.poc) together
+The stitching layer to get [Credit Report Registration POC](https://github.com/MikhailMamayeu/credit-report.registration-poc) and [Credit Report Summary Report POC](https://github.com/MikhailMamayeu/credit-report.summary-report-poc) together
 
 ## Getting started
 
@@ -24,7 +24,7 @@ These instructions will get you a copy of the project up and running on your loc
 npm install
 ```
 
-:heavy_exclamation_mark: In order to get the whole Credit Report POC application together, you need to have [registration](https://github.com/MikhailMamayeu/credit-report.registration.poc) and [summary report](https://github.com/MikhailMamayeu/credit-report.summary-report.poc) up and running as well
+:heavy_exclamation_mark: In order to get the whole Credit Report POC application together, you need to have [registration](https://github.com/MikhailMamayeu/credit-report.registration-poc) and [summary report](https://github.com/MikhailMamayeu/credit-report.summary-report-poc) up and running as well
 
 - You are good to go to run your application locally
 
@@ -57,13 +57,13 @@ mkcert credit-report-web-container-poc.dev.ctmers.io
 - Build the image
 
 ```
-docker build -t credit-report.web-container.poc .
+docker build -t credit-report.web-container-poc .
 ```
 
 - Serve the bundle over NGINX inside Docker
 
 ```
-docker run -dp 2000:80 -p 3000:443 credit-report.web-container.poc
+docker run -dp 2000:80 -p 3000:443 credit-report.web-container-poc
 ```
 
 ## Performance and bundle weight
