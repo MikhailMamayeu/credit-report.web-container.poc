@@ -34,7 +34,7 @@ s3-extract:
 
 s3-deploy: # Deploy assets to S3
 s3-deploy:
-	/bin/bash -c ". aws-assume-role $(AWS_DEV_ACCOUNT) && aws s3 sync $(ROOT_DIR)dist/ s3://ctm-fcr-web-poc --region $(AWS_REGION)"
+	/bin/bash -c ". aws-assume-role $(AWS_DEV_ACCOUNT) && aws s3 sync $(ROOT_DIR)dist/ s3://ctm-fcr-web-poc --region $(AWS_REGION) --content-encoding gzip"
 
 s3-clean: # Cleanup
 s3-clean:
