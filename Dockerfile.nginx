@@ -34,7 +34,7 @@ COPY --chown=nobody:nobody nginx/default.conf /etc/nginx/conf.d/default.conf
 
 COPY --chown=nobody:nobody nginx/nginx.conf /etc/nginx/nginx.conf
 
-EXPOSE 3000
+EXPOSE 80
 
 USER nobody
 
