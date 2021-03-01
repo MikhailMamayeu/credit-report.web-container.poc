@@ -1,7 +1,7 @@
 owner: Mikhail.Mamayeu
 name: web-container-poc
 domain: credit-report
-serviceCatalogue: catalogue.yakov.io/service/credit-report.web-container.poc
+serviceCatalogue: catalogue.yakov.io/service/credit-report.web-container-poc
 tier: 5
 role: app
 
