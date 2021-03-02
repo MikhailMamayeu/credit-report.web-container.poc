@@ -1,6 +1,6 @@
 {
   "name": "credit-report.web-container-poc",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Stitching layer for Credit Report micro frontend applications",
   "private": true,
   "scripts": {
