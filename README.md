@@ -72,4 +72,4 @@ docker run -dp 2000:80 -p 3000:443 credit-report.web-container-poc
 
 [Web performance](https://ctm-fcr-web-poc.s3-eu-west-1.amazonaws.com/sitespeed-result/custom-micro-frontend/index.html)
 
-[Bundle size](https://ja2r7.app.goo.gl/MQ7k5Tf6pCdWDYJe7)
+[Bundle size](https://ja2r7.app.goo.gl/mX8CCAyF7N26FUKE6)
