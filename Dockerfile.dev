@@ -34,13 +34,13 @@ COPY credit-report-web-container-poc.dev.ctmers.io.pem /etc/ssl/certs/credit-rep
 
 COPY credit-report-web-container-poc.dev.ctmers.io-key.pem /etc/ssl/private/credit-report-web-container-poc.dev.ctmers.io-key.pem
 
-COPY nginx/self-signed.conf /etc/nginx/snippets/self-signed.conf
+COPY --chown=nobody:nobody nginx/self-signed.conf /etc/nginx/snippets/self-signed.conf
 
-COPY nginx/ssl-params.conf /etc/nginx/snippets/ssl-params.conf
+COPY --chown=nobody:nobody nginx/ssl-params.conf /etc/nginx/snippets/ssl-params.conf
 
-COPY nginx/default.dev.conf /etc/nginx/conf.d/default.conf
+COPY --chown=nobody:nobody nginx/default.dev.conf /etc/nginx/conf.d/default.conf
 
-COPY nginx/nginx.conf /etc/nginx/nginx.conf
+COPY --chown=nobody:nobody nginx/nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80
 
