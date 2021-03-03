@@ -1,4 +1,6 @@
 service:
+  hostnames:
+    - credit-report-paas-poc.test.ctmers.io
   singleton: true
   whitelist:
     internal: true
