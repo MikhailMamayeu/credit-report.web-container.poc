@@ -3,7 +3,7 @@ const getPublicPath = (hostType, microFrontend) => {
     case 's3':
       return `/v1/${microFrontend.page}`;
     case 'nginx':
-      return `https://ctm-fcr-web-poc.s3-eu-west-1.amazonaws.com/v2/${microFrontend.page}`;
+      return `https://credit-report-s3-poc.test.ctmers.io.s3-eu-west-1.amazonaws.com/v2/${microFrontend.page}`;
     default:
       return `https://credit-report-${microFrontend.page}-poc.dev.ctmers.io:${microFrontend.port}`;
   }
