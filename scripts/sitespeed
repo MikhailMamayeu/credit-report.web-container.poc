@@ -13,8 +13,9 @@ docker run \
   --rm \
   -v "$(pwd):/sitespeed.io" \
   --network=host \
-  sitespeedio/sitespeed.io:16.8.1 \
+  sitespeedio/sitespeed.io:16.9.2-plus1 \
   --outputFolder sitespeed-result \
+  --plugins.remove /gpsi \
   $TETS_URL
 
 # Push results to S3 bucket
