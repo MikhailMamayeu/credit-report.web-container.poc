@@ -1,5 +1,8 @@
 #!/bin/bash
 
+TETS_URL=$1
+S3_FOLDER=$2
+
 # Remove previous results
 
 rm -rf sitespeed-result
@@ -12,8 +15,8 @@ docker run \
   --network=host \
   sitespeedio/sitespeed.io:16.8.1 \
   --outputFolder sitespeed-result \
-  https://credit-report-web-container-poc.dev.ctmers.io:3000
+  $TETS_URL
 
 # Push results to S3 bucket
 
-aws s3 sync sitespeed-result s3://credit-report-s3-poc.test.ctmers.io/sitespeed-result/custom-micro-frontend
+aws s3 sync sitespeed-result s3://credit-report-s3-poc.test.ctmers.io/sitespeed-result/custom-micro-frontend/$S3_FOLDER
