@@ -34,6 +34,7 @@ module.exports = {
       template: 'public/index.html',
       title: 'Credit Report Web Container',
       environment: process.env.NODE_ENV,
+      hostType: process.env.HOST_TYPE,
     }),
     new webpack.DefinePlugin({
       environment: JSON.stringify(process.env.NODE_ENV),
