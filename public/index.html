@@ -9,16 +9,7 @@
     <link rel="preconnect" href="https://cdn2.comparethemarket.com" />
     <% if (htmlWebpackPlugin.options.hostType === 's3') { %>
     <link rel="preconnect" href="https://s3-eu-west-1.amazonaws.com" />
-    <% } %> <% } %> <% if (htmlWebpackPlugin.options.hostType === 's3') { %>
-    <script src="/v1/registration/static/registration.js"></script>
-    <script src="/v1/summary-report/static/summaryReport.js"></script>
-    <% } else if (htmlWebpackPlugin.options.hostType === 'nginx') { %>
-    <script src="https://s3-eu-west-1.amazonaws.com/credit-report-s3-poc.test.ctmers.io/v2/registration/static/registration.js"></script>
-    <script src="https://s3-eu-west-1.amazonaws.com/credit-report-s3-poc.test.ctmers.io/v2/summary-report/static/summaryReport.js"></script>
-    <% } else { %>
-    <script src="https://credit-report-registration-poc.dev.ctmers.io:3001/static/registration.js"></script>
-    <script src="https://credit-report-summary-report-poc.dev.ctmers.io:3002/static/summaryReport.js"></script>
-    <% } %>
+    <% } %> <% } %>
   </head>
   <body>
     <div id="app"></div>
@@ -43,6 +34,15 @@
       crossorigin
       src="https://unpkg.com/prop-types@15.7.2/prop-types.min.js"
     ></script>
+    <% } %> <% if (htmlWebpackPlugin.options.hostType === 's3') { %>
+    <script src="/v1/registration/static/registration.js"></script>
+    <script src="/v1/summary-report/static/summaryReport.js"></script>
+    <% } else if (htmlWebpackPlugin.options.hostType === 'nginx') { %>
+    <script src="https://s3-eu-west-1.amazonaws.com/credit-report-s3-poc.test.ctmers.io/v2/registration/static/registration.js"></script>
+    <script src="https://s3-eu-west-1.amazonaws.com/credit-report-s3-poc.test.ctmers.io/v2/summary-report/static/summaryReport.js"></script>
+    <% } else { %>
+    <script src="https://credit-report-registration-poc.dev.ctmers.io:3001/static/registration.js"></script>
+    <script src="https://credit-report-summary-report-poc.dev.ctmers.io:3002/static/summaryReport.js"></script>
     <% } %>
   </body>
 </html>
