@@ -7,8 +7,9 @@
     <% if (htmlWebpackPlugin.options.environment === 'production') { %>
     <link rel="preconnect" href="https://unpkg.com" />
     <link rel="preconnect" href="https://cdn2.comparethemarket.com" />
-    <% } %>
     <% if (htmlWebpackPlugin.options.hostType === 's3') { %>
+    <link rel="preconnect" href="https://s3-eu-west-1.amazonaws.com" />
+    <% } %> <% } %> <% if (htmlWebpackPlugin.options.hostType === 's3') { %>
     <script src="/v1/registration/static/registration.js"></script>
     <script src="/v1/summary-report/static/summaryReport.js"></script>
     <% } else if (htmlWebpackPlugin.options.hostType === 'nginx') { %>
